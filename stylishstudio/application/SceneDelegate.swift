@@ -20,8 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
          window = UIWindow(windowScene: windowScene)
-         let vc = WelcomePage() //Instead of UIViewController() we initilise our initial viewController
-         window?.rootViewController = vc
+         let vc = HomePage() //Instead of UIViewController() we initilise our initial viewController
+        let navVc = UINavigationController(rootViewController: vc)
+         window?.rootViewController = navVc
          window?.makeKeyAndVisible()
     }
 
